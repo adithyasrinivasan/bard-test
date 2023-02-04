@@ -2,8 +2,8 @@
 id: 20f6a148-63b8-47a8-9b0e-d57095d78c21
 blueprint: page
 title: 'Long form content'
-updated_by: f9af1bbb-3f1a-4ce3-8f7e-eb66cbb69a9a
-updated_at: 1674898078
+updated_by: ad5dd9ba-aec3-4c4f-9951-253fe1dd5b97
+updated_at: 1675507278
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
@@ -142,7 +142,7 @@ page_builder:
       -
         type: orderedList
         attrs:
-          order: 1
+          start: 1
         content:
           -
             type: listItem
@@ -227,6 +227,26 @@ page_builder:
           -
             type: text
             text: 'Phasellus egestas, ante at bibendum porttitor, nulla urna pellentesque arcu, ut pulvinar libero mauris at sapien. Maecenas lacinia arcu et diam venenatis eleifend. Ut vestibulum pharetra diam, eget eleifend diam tincidunt ac.'
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
+          -
+            type: text
+            marks:
+              -
+                type: link
+                attrs:
+                  href: null
+                  rel: null
+                  target: null
+                  title: null
+            text: 'Phasellus dictum'
+          -
+            type: text
+            text: ', nisi vel tincidunt eleifend, diam risus tempor elit, at blandit ipsum ipsum vel felis. Morbi pulvinar erat sapien. Nam euismod dolor quis eros egestas, a hendrerit mi pharetra. Vestibulum varius dui sit amet augue auctor convallis. Maecenas imperdiet mauris non posuere dignissim. Duis tempus molestie efficitur. Donec efficitur leo vel justo dignissim ultrices. Morbi fermentum magna in purus dapibus euismod. Etiam lobortis odio lectus, eu blandit urna gravida at.'
       -
         type: set
         attrs:

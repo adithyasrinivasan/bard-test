@@ -45,39 +45,35 @@ class AppServiceProvider extends ServiceProvider
                 $view->with($entry->toAugmentedArray());
             }
         });
-
-        Mutator::data('paragraph', function ($data, $meta){
+        
+        $replaced = false;
+        Mutator::data('paragraph', function ($data, $meta) use (&$replaced){
             if (empty($data->content)) {
                 return;
             }
+            /** remove this check and then replacing it works */
+            if ($replaced){
+                return;
+            }
             foreach ($data->content as $i => $node) {
-               
-                if ($node->type !== 'text') {
-                    continue;
-                }
+                if (isset($node->text)) {
 
-                foreach ($node->marks ?? [] as $mark){
-                    if ($mark->type !== 'italic' && $mark->type !== 'bold' && $mark->type !== 'underline'){
+                    $regex = '/^(.*?)\bspecimen\b(.*)$/';
+                    if (!preg_match($regex, $node->text, $match)) {
                         continue;
                     }
-                }
 
-                $regex = '/^(.*?)\bLorem ipsum\b(.*)$/';
-
-                if (!preg_match($regex, $node->text, $match)) {
-                    continue;
+                    [, $before, $after] = $match;
+                    array_splice($data->content, $i, 1, [
+                        (object)['type' => 'text', 'text' => $before],
+                        (object)['type' => 'text', 'text' => 'DUMMY TEXT', 'marks' => [
+                            (object)['type' => 'link', 'attrs' => (object)['href' => 'https://google.com']],
+                        ]],
+                        (object)['type' => 'text', 'text' => $after],
+                    ]);
+                    $replaced = true;
                 }
                 
-                [, $before, $after] = $match;
-                array_splice($data->content, $i, 1, [
-                    (object)['type' => 'text', 'text' => $before],
-                    (object)['type' => 'text', 'text' => 'DUMMY TEXT', 'marks' => [
-                        (object)['type' => 'link', 'attrs' => (object)['href' => 'https://google.com']],
-                    ]],
-                    (object)['type' => 'text', 'text' => $after],
-                ]);
-                
-                return;
             }
         });
     }

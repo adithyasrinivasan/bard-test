@@ -52,6 +52,20 @@ fields:
                 listable: hidden
                 instructions_position: above
                 visibility: visible
+                sets:
+                  image_set:
+                    display: 'Image Set'
+                    fields:
+                      -
+                        handle: asset
+                        field: button.asset
+                        config:
+                          container: images
+                          validate:
+                            - 'required_if:{this}.link_type,asset'
+                          if:
+                            link_type: 'equals asset'
+                            show_controls: 'equals true'
         form:
           display: Form
           instructions: 'Show a form.'

@@ -39,7 +39,7 @@ return [
         |
         */
 
-        'driver' => 'gd',
+        'driver' => env('IMAGE_MANIPULATION_DRIVER', 'gd'),
 
         /*
         |--------------------------------------------------------------------------
@@ -52,7 +52,7 @@ return [
         |
         */
 
-        'cache' => false,
+        'cache' => env('SAVE_CACHED_IMAGES', true),
         'cache_path' => public_path('img'),
 
         /*
@@ -67,7 +67,7 @@ return [
         */
 
         'presets' => [
-            // 'small' => ['w' => 200, 'h' => 200, 'q' => 75, 'fit' => 'crop'],
+            'replacement' => ['w' => 2500, 'q' => 100],
         ],
 
     ],
@@ -78,7 +78,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | Enabling this will make Glide automatically crop assets at their focal
-    | point (at the center if no focal point is defined). Otherwise,
+    | point (at at the center if no focal point is defined). Otherwise,
     | you will need to manually add any crop related parameters.
     |
     */
@@ -128,16 +128,4 @@ return [
 
     'cache_meta' => true,
 
-    /*
-    |--------------------------------------------------------------------------
-    | Focal Point Editor
-    |--------------------------------------------------------------------------
-    |
-    | When editing images in the Control Panel, there is an option to choose
-    | a focal point. When working with third-party image providers such as
-    | Cloudinary it can be useful to disable Statamic's built-in editor.
-    |
-    */
-
-    'focal_point_editor' => true,
 ];

@@ -32,20 +32,6 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Queue Connection
-    |--------------------------------------------------------------------------
-    |
-    | You may choose which queue connection should be used when dispatching
-    | commit jobs. Unless specified, the default connection will be used.
-    |
-    | https://statamic.dev/git-integration#queueing-commits
-    |
-    */
-
-    'queue_connection' => env('STATAMIC_GIT_QUEUE_CONNECTION'),
-
-    /*
-    |--------------------------------------------------------------------------
     | Dispatch Delay
     |--------------------------------------------------------------------------
     |
@@ -97,21 +83,13 @@ return [
         resource_path('fieldsets'),
         resource_path('forms'),
         resource_path('users'),
+        resource_path('preferences.yaml'),
         storage_path('forms'),
-        public_path('assets'),
+        public_path('images'),
+        public_path('favicons'),
+        public_path('files'),
+        public_path('social_images'),
     ],
-
-    /*
-    |--------------------------------------------------------------------------
-    | Git Binary
-    |--------------------------------------------------------------------------
-    |
-    | By default, Statamic will try to use the "git" command, but you can set
-    | an absolute path to the git binary if necessary for your environment.
-    |
-    */
-
-    'binary' => env('STATAMIC_GIT_BINARY', 'git'),
 
     /*
     |--------------------------------------------------------------------------
@@ -126,7 +104,7 @@ return [
 
     'commands' => [
         'git add {{ paths }}',
-        'git -c "user.name={{ name }}" -c "user.email={{ email }}" commit -m "{{ message }}"',
+        'git -c "user.name={{ name }}" -c "user.email={{ email }}" commit -m "{{ message }} [BOT]"',
     ],
 
     /*
@@ -154,8 +132,8 @@ return [
     */
 
     'ignored_events' => [
-        // \Statamic\Events\UserSaved::class,
-        // \Statamic\Events\UserDeleted::class,
+        // \Statamic\Events\Data\UserSaved::class,
+        // \Statamic\Events\Data\UserDeleted::class,
     ],
 
     /*

@@ -37,6 +37,7 @@ return [
             'driver' => 'file',
             'path' => public_path('static'),
             'lock_hold_length' => 0,
+            'warm_concurrency' => 10
         ],
 
     ],
@@ -53,7 +54,10 @@ return [
     */
 
     'exclude' => [
-        //
+        '/site.webmanifest',
+        '/sitemap.xml',
+        '/sitemaps.xml'
+        // Add sitemaps for multisites here
     ],
 
     /*
@@ -73,11 +77,10 @@ return [
 
         'class' => null,
 
-        'rules' => [
-            //
-        ],
+        'rules' => 'all',
 
     ],
+
 
     /*
     |--------------------------------------------------------------------------

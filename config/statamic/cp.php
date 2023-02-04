@@ -38,7 +38,26 @@ return [
     */
 
     'widgets' => [
-        'getting_started',
+        [
+            'type' => 'images_missing_alt',
+            'container' => 'images',
+            'filetypes' => ['jpg', 'jpeg', 'png', 'gif', 'webp', 'avif', 'bmp', 'tiff', 'svg'],
+            'limit' => 5,
+            'expiry' => 0,
+            'width' => 50
+        ],
+        [
+            'type' => 'collection',
+            'collection' => 'pages',
+            'width' => 50
+        ],
+        [
+            'type' => 'form',
+            'form' => 'contact',
+            'fields' => ['name', 'email'],
+            'limit' => '5',
+            'width' => 100
+        ],
     ],
 
     /*
@@ -47,12 +66,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | When a date is encountered throughout the Control Panel, it will be
-    | rendered in the following format unless overridden in specific
-    | fields, and so on. Any PHP date variables are permitted.
-    |
-    | This takes precedence over the date_format in system.php.
-    |
-    | https://www.php.net/manual/en/function.date.php
+    | rendered in the following format. Any PHP date variables are permitted.
     |
     */
 
@@ -92,9 +106,9 @@ return [
 
     'support_url' => env('STATAMIC_SUPPORT_URL', 'https://statamic.com/support'),
 
-    /*
+     /*
     |--------------------------------------------------------------------------
-    | Theme
+    | Login Theme
     |--------------------------------------------------------------------------
     |
     | Optionally spice up the login and other outside-the-control-panel
@@ -117,7 +131,10 @@ return [
 
     'custom_cms_name' => env('STATAMIC_CUSTOM_CMS_NAME', 'Statamic'),
 
-    'custom_logo_url' => env('STATAMIC_CUSTOM_LOGO_URL', null),
+    'custom_logo_url' => [
+        'nav' => env('STATAMIC_CUSTOM_LOGO_NAV_URL', null),
+        'outside' => env('STATAMIC_CUSTOM_LOGO_OUTSIDE_URL', null)
+    ],
 
     'custom_favicon_url' => env('STATAMIC_CUSTOM_FAVICON_URL', null),
 

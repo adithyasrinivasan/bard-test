@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "907d3a7597a5a3dba27e053e9b3b2c3e",
+    "content-hash": "bd14fc777dd90b9748d523d20f4da5a5",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -5177,6 +5177,50 @@
                 "source": "https://github.com/statamic/Stringy"
             },
             "time": "2022-05-04T18:41:52+00:00"
+        },
+        {
+            "name": "studio1902/statamic-peak-commands",
+            "version": "v1.17",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/studio1902/statamic-peak-commands.git",
+                "reference": "1b65a0616f2bd353be7cb3fed0fcb4040378ae85"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/studio1902/statamic-peak-commands/zipball/1b65a0616f2bd353be7cb3fed0fcb4040378ae85",
+                "reference": "1b65a0616f2bd353be7cb3fed0fcb4040378ae85",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "statamic": {
+                    "name": "Statamic Peak Commands",
+                    "description": "Statamic Peak Commands addon"
+                },
+                "laravel": {
+                    "providers": [
+                        "Studio1902\\Peak\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Studio1902\\Peak\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "support": {
+                "issues": "https://github.com/studio1902/statamic-peak-commands/issues",
+                "source": "https://github.com/studio1902/statamic-peak-commands/tree/v1.17"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/studio1902",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-01-25T09:05:17+00:00"
         },
         {
             "name": "symfony/console",

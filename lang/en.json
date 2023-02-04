@@ -1,7 +1,8 @@
 {
-    "The :attribute must contain at least one letter.": "The :attribute must contain at least one letter.",
-    "The :attribute must contain at least one number.": "The :attribute must contain at least one number.",
-    "The :attribute must contain at least one symbol.": "The :attribute must contain at least one symbol.",
-    "The :attribute must contain at least one uppercase and one lowercase letter.": "The :attribute must contain at least one uppercase and one lowercase letter.",
-    "The given :attribute has appeared in a data leak. Please choose a different :attribute.": "The given :attribute has appeared in a data leak. Please choose a different :attribute."
+    "Consent": "Consent",
+    "Email address": "E-mail address",
+    "Fax": "Fax",
+    "I agree that my submitted data is being collected and stored.": "I agree that my submitted data is being collected and stored.",
+    "Message": "Message",
+    "Name": "Name"
 }

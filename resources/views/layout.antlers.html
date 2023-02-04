@@ -1,16 +1,28 @@
+{{#
+    @name Layout
+    @desc The default layout file.
+#}}
+
+<!-- /layout.antlers.html -->
 <!doctype html>
-<html lang="{{ site:short_locale }}">
+<html lang="{{ site:short_locale }}" class="antialiased">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ title ?? site:name }}</title>
-        <link rel="stylesheet" href="{{ mix src='css/tailwind.css' }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        {{ vite src="resources/css/site.css|resources/js/site.js" }}
+        {{ partial:snippets/seo }}
+        {{ partial:snippets/browser_appearance }}
     </head>
-    <body class="bg-gray-100 font-sans leading-normal text-gray-800">
-        <div class="mx-auto px-2 lg:min-h-screen flex flex-col items-center justify-center">
-            {{ template_content }}
-        </div>
-        <script src="{{ mix src='/js/site.js' }}"></script>
+    <body class="flex flex-col min-h-screen bg-white selection:bg-primary selection:text-white">
+        {{ partial:snippets/noscript }}
+        {{ partial:navigation/skip_to_content }}
+        {{ partial:components/toolbar }}
+        {{ yield:seo_body }}
+
+        {{ partial:layout/header }}
+        {{ template_content }}
+        {{ partial:layout/footer }}
     </body>
 </html>
+<!-- End: /layout.antlers.html -->

@@ -47,6 +47,9 @@ class AppServiceProvider extends ServiceProvider
         });
 
         Mutator::data('paragraph', function ($data, $meta){
+            if (empty($data->content)) {
+                return;
+            }
             foreach ($data->content as $i => $node) {
                
                 if ($node->type !== 'text') {
@@ -73,7 +76,7 @@ class AppServiceProvider extends ServiceProvider
                     ]],
                     (object)['type' => 'text', 'text' => $after],
                 ]);
-
+                
                 return;
             }
         });

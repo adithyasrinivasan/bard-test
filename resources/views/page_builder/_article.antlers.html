@@ -7,9 +7,8 @@
 <!-- /page_builder/_article.antlers.html -->
 <section class="fluid-container grid grid-cols-12">
     {{ partial:typography/prose as="article" class="contents" }}
-        {{ article }}
-            {{ partial src="components/{type}" }}
-        {{ /article }}
-    {{ /partial:typography/prose }}
+    <div class="prose size-md">
+        {{ bard_field }}
+    </div>
 </section>
 <!-- End: /page_builder/_article.antlers.html -->

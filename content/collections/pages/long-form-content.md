@@ -3,7 +3,7 @@ id: 20f6a148-63b8-47a8-9b0e-d57095d78c21
 blueprint: page
 title: 'Long form content'
 updated_by: ad5dd9ba-aec3-4c4f-9951-253fe1dd5b97
-updated_at: 1675507278
+updated_at: 1675508085
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
@@ -26,7 +26,7 @@ page_builder:
         content:
           -
             type: text
-            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
           -
             type: text
             marks:
@@ -48,14 +48,14 @@ page_builder:
           values:
             type: pull_quote
             size: lg
-            quote: 'Maecenas imperdiet mauris non posuere dignissim. Duis tempus molestie efficitur. '
+            quote: 'Maecenas imperdiet mauris non posuere dignissim. Duis tempus molestie efficitur.'
             author: 'Studio 1902'
       -
         type: paragraph
         content:
           -
             type: text
-            text: 'Mauris diam justo, gravida vitae lacinia in, mattis quis nibh. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce semper nunc in tincidunt viverra. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean ullamcorper nisl augue, vel venenatis enim faucibus sit amet. Maecenas cursus magna ut augue mollis finibus. Morbi sed nunc in enim pretium suscipit vitae quis leo. Sed scelerisque mi quis odio mollis lobortis. '
+            text: 'Mauris diam justo, gravida vitae lacinia in, mattis quis nibh. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce semper nunc in tincidunt viverra. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean ullamcorper nisl augue, vel venenatis enim faucibus sit amet. Maecenas cursus magna ut augue mollis finibus. Morbi sed nunc in enim pretium suscipit vitae quis leo. Sed scelerisque mi quis odio mollis lobortis.'
       -
         type: bulletList
         content:
@@ -67,7 +67,7 @@ page_builder:
                 content:
                   -
                     type: text
-                    text: 'Proin condimentum feugiat purus '
+                    text: 'Proin condimentum feugiat purus'
           -
             type: listItem
             content:
@@ -85,7 +85,7 @@ page_builder:
                 content:
                   -
                     type: text
-                    text: 'Vivamus pellentesque eleifend '
+                    text: 'Vivamus pellentesque eleifend'
           -
             type: listItem
             content:
@@ -115,7 +115,7 @@ page_builder:
         content:
           -
             type: text
-            text: 'Nunc ut tortor vestibulum, blandit ipsum nec, luctus ipsum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent rutrum enim at pulvinar tristique. Ut scelerisque vestibulum nisl nec vestibulum. Vestibulum porttitor commodo tempus. Ut non vulputate orci, a eleifend nibh. Etiam pulvinar, orci consequat egestas pharetra, odio orci suscipit nulla, et rutrum arcu tellus eu orci. Sed mi lectus, euismod non tellus consequat, auctor scelerisque quam. Pellentesque feugiat, ipsum in imperdiet vehicula, orci orci mattis dolor, ut auctor nulla diam sed quam. Nunc ullamcorper efficitur turpis, ac luctus augue condimentum eget. Integer semper cursus elit. Aenean tellus orci, imperdiet sit amet eleifend vitae, efficitur sit amet felis. '
+            text: 'Nunc ut tortor vestibulum, blandit ipsum nec, luctus ipsum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent rutrum enim at pulvinar tristique. Ut scelerisque vestibulum nisl nec vestibulum. Vestibulum porttitor commodo tempus. Ut non vulputate orci, a eleifend nibh. Etiam pulvinar, orci consequat egestas pharetra, odio orci suscipit nulla, et rutrum arcu tellus eu orci. Sed mi lectus, euismod non tellus consequat, auctor scelerisque quam. Pellentesque feugiat, ipsum in imperdiet vehicula, orci orci mattis dolor, ut auctor nulla diam sed quam. Nunc ullamcorper efficitur turpis, ac luctus augue condimentum eget. Integer semper cursus elit. Aenean tellus orci, imperdiet sit amet eleifend vitae, efficitur sit amet felis.'
       -
         type: blockquote
         content:
@@ -138,7 +138,7 @@ page_builder:
         content:
           -
             type: text
-            text: 'Mauris malesuada, eros eu facilisis vehicula, turpis justo feugiat felis, lobortis sagittis nulla ante at mauris. Donec efficitur, arcu vel cursus ornare, urna ex sollicitudin est, ac pellentesque neque lectus vel tortor. '
+            text: 'Mauris malesuada, eros eu facilisis vehicula, turpis justo feugiat felis, lobortis sagittis nulla ante at mauris. Donec efficitur, arcu vel cursus ornare, urna ex sollicitudin est, ac pellentesque neque lectus vel tortor.'
       -
         type: orderedList
         attrs:
@@ -232,7 +232,7 @@ page_builder:
         content:
           -
             type: text
-            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
           -
             type: text
             marks:
@@ -270,4 +270,27 @@ page_builder:
                 button_type: button
     type: article
     enabled: true
+    bard_field:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      -
+        type: paragraph
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      -
+        type: paragraph
 ---

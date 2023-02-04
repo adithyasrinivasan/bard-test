@@ -15,7 +15,43 @@ fields:
           instructions: 'Long form content, can be expanded with media like figures, video, quotes or tables.'
           fields:
             -
-              import: article
+              handle: bard_field
+              field:
+                collapse: false
+                always_show_set_button: false
+                previews: true
+                smart_typography: false
+                buttons:
+                  - h2
+                  - h3
+                  - bold
+                  - italic
+                  - unorderedlist
+                  - orderedlist
+                  - removeformat
+                  - quote
+                  - anchor
+                  - image
+                  - table
+                save_html: false
+                inline: false
+                toolbar_mode: fixed
+                link_noopener: false
+                link_noreferrer: false
+                target_blank: false
+                reading_time: false
+                fullscreen: true
+                allow_source: true
+                enable_input_rules: true
+                enable_paste_rules: true
+                antlers: false
+                remove_empty_nodes: false
+                display: 'Bard Field'
+                type: bard
+                icon: bard
+                listable: hidden
+                instructions_position: above
+                visibility: visible
         form:
           display: Form
           instructions: 'Show a form.'
@@ -28,3 +64,6 @@ fields:
           fields:
             -
               import: link_blocks
+      instructions_position: above
+      visibility: visible
+      previews: true
